@@ -1,0 +1,46 @@
+@import '../../asset/scss/breakpoints.scss';
+
+.country-info {
+  @include breakpoint-size-change(93%, large, 100%) {
+      margin: 1em 0;
+  }
+  
+  padding: 1em 0;
+
+  &-wrapper {
+    @include breakpoint(large) {
+      margin-top: 5em;
+      padding-right: 2em;
+    }
+
+    &-img {
+      @include breakpoint(large) {
+          margin: 0;
+          height: 100%;
+          width: 44%;
+      }
+
+      width: 100%;
+      height: 61vw;
+      margin: 4em 0 2.75em 0;
+    }
+
+    &-details {
+      @include breakpoint(large) {
+        margin-top: 2.25em;
+        width: 44%;
+      }
+
+      &-label {
+        @include breakpoint(large) {
+            font-size: 2rem;
+            margin-bottom: 1em;
+        }
+
+        font-size: 1.37rem;
+        margin-bottom: 1em;
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}

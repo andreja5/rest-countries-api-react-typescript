@@ -1,0 +1,11 @@
+@import './asset/scss/font.scss';
+@import './asset/scss/layout.scss';
+@import './asset/scss/colors.scss';
+
+.container {
+  @include get-font(light, detail);
+  
+  min-height: 100vh;
+  color: $text-color;
+  background-color: $background-color;
+}

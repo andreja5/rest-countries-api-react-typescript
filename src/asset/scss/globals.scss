@@ -1,0 +1,59 @@
+@import './breakpoints.scss';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-fd-col {
+    flex-direction: column;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Grid
+.grid {
+  display: grid;
+  
+  &-l-4 {
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  
+    @include breakpoint(large) {
+        grid-gap: 72px;
+    }
+  }
+  
+  &-l-2 {
+    @include breakpoint(large) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 6.5em;
+    }
+  }
+}
+

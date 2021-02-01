@@ -1,0 +1,26 @@
+@import '../../../asset/scss/breakpoints.scss';
+@import '../../../asset/scss/colors.scss';
+
+.select {
+  @include breakpoint(medium) {
+    width: 14em;
+    height: 3.75em;
+    margin-bottom: 3.5em;
+  }
+
+  @include breakpoint(large) {
+    font-size: 0.9rem;
+  }
+
+  border: none;
+  border-right: 1em solid transparent;
+  width: 16.5em;
+  margin-top: 1px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  color: $input-color;
+  margin-bottom: 2.55em;
+  padding: 1.25em 2em 1.25em 1.5em;
+  background-color: $element-color;
+  box-shadow: 0 0 8px $shadow-color;
+}

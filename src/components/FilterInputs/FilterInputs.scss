@@ -1,0 +1,9 @@
+@import '../../asset/scss/breakpoints.scss';
+
+.filter-inputs {
+  @include breakpoint(large) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

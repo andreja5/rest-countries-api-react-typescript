@@ -1,0 +1,23 @@
+$breakpoint-sizes: (
+    small: 375px,
+    medium: 768px,
+    large: 1280px,
+);
+
+@mixin breakpoint($size) {
+    @if map-has-key($breakpoint-sizes, $size) {
+        @media screen and (min-width: map-get($breakpoint-sizes, $size)) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint-size-change($from, $size, $to) {
+    margin: auto;
+    width: $from;
+
+    @include breakpoint($size) {
+        width: $to;
+        @content;
+    }
+}

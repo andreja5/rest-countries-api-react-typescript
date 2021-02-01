@@ -1,0 +1,32 @@
+@import '../../../asset/scss/breakpoints.scss';
+
+.switch-mode {
+  padding-top: 2px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .switch-mode-icon {
+    margin-right: 1em;
+    font-size: 0.7em;
+  }
+
+  .switch-mode-label {
+      font-size: 0.78rem;
+  }
+
+  @include breakpoint(medium) {
+      .switch-mode-icon,
+      .switch-mode-label {
+          font-size: 0.85rem;
+      }
+  }
+
+  @include breakpoint(large) {
+      .switch-mode-icon,
+      .switch-mode-label {
+          font-size: 1rem;
+      }
+  }
+}

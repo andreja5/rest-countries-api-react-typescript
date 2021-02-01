@@ -1,0 +1,23 @@
+$font-sizes: (
+    home: 14px,
+    detail: 16px,
+);
+
+$font-weights: (
+    light: 300,
+    medium: 600,
+    bold: 800,
+);
+
+@mixin get-font($weight, $size) {
+    @include get-font-weight($weight);
+    @include get-font-size($size);
+}
+
+@mixin get-font-weight($weight) {
+    font-weight: map-get($font-weights, $weight);
+}
+
+@mixin get-font-size($size) {
+    font-size: map-get($font-sizes, $size);
+}

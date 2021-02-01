@@ -1,0 +1,42 @@
+@import '../../asset/scss/breakpoints.scss';
+@import '../../asset/scss/colors.scss';
+@import '../../asset/scss/font.scss';
+
+.border-list {
+  @include breakpoint(large) {
+    display: grid;
+    grid-template-columns: repeat(6, 82px);
+    grid-gap: 0.75em;
+    margin-top: 1em;
+    align-items: center;
+  }
+
+  margin-top: -0.5em;
+  grid-column: 1/-1;
+
+  &-title {
+    @include get-font-weight(light);
+  
+    @include breakpoint(large) {
+        grid-column: span 2;
+    }
+    
+    font-size: 1.03rem;
+    margin-bottom: 0.35em;
+  }
+
+  &-button {
+    @include breakpoint(large) {
+        width: 100%;
+        margin: 0;
+        font-size: 0.8rem;
+    }
+    
+    border-radius: 2px;
+    padding: 0.66em 0;
+    margin: 1em 0.925em 0 0;
+    font-size: 0.7rem;
+    box-shadow: 0 0 4px $shadow-color;
+    width: 30%;
+  }
+}

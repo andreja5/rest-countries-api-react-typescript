@@ -1,0 +1,34 @@
+@import '../../asset/scss/breakpoints.scss';
+@import '../../asset/scss/font.scss';
+
+.country-items {
+  padding: 1.5em;
+  padding-bottom: 2.5em;
+  list-style-type: none;
+  margin-bottom: 2.75em;
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  &-item {
+    @include breakpoint(large) {
+        font-size: 1rem;
+        margin-bottom: 0.6em;
+    }
+
+    font-size: 0.875rem;
+    margin-bottom: 0.95em;
+
+    &-identifier {
+      @include get-font-weight(medium);
+      
+      text-transform: capitalize;
+    }
+  }
+
+  &-label {
+    margin-top: -0.3em;
+    margin-bottom: 0.9em;
+  }
+}

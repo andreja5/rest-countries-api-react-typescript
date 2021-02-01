@@ -1,0 +1,44 @@
+@import '../../../asset/scss/breakpoints.scss';
+@import '../../../asset/scss/colors.scss';
+
+.search {
+  position: relative;
+  margin-bottom: 2.5em;
+
+  @include breakpoint(medium) {
+    width: 37.5%;
+  }
+
+  &-icon {
+    top: 15px;
+    left: 2.1em;
+    position: absolute;
+    font-size: 0.95rem;
+
+    @include breakpoint(large) {
+      top: 19px;
+      left: 2em;
+      font-size: 1rem;
+    }
+  }
+
+  &-box {
+    width: 100%;
+    border: none;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    color: $input-color;
+    padding: 1.25em 2em 1.25em 6.2em;
+    background-color: $element-color;
+    box-shadow: 0 0 8px $shadow-color;
+
+    @include breakpoint(large) {
+      padding-left: 5em;
+      font-size: 0.9rem;
+    }
+
+    &::placeholder {
+        color: $input-color;
+    }
+  }
+}
